@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'app_colors.dart';
 
 /// Material 3 light and dark themes for BuzzMaster.
@@ -74,107 +75,93 @@ class AppTheme {
 
   // ─── Text Themes ──────────────────────────────────────────────────────────
   static TextTheme _buildTextTheme(Color textColor, Color secondaryColor) {
-    return TextTheme(
+    final baseTextTheme = TextTheme(
       displayLarge: TextStyle(
-        fontFamily: _fontFamily,
         fontSize: 57,
         fontWeight: FontWeight.w900,
         color: textColor,
         letterSpacing: -0.25,
       ),
       displayMedium: TextStyle(
-        fontFamily: _fontFamily,
         fontSize: 45,
         fontWeight: FontWeight.w800,
         color: textColor,
       ),
       displaySmall: TextStyle(
-        fontFamily: _fontFamily,
         fontSize: 36,
         fontWeight: FontWeight.w700,
         color: textColor,
       ),
       headlineLarge: TextStyle(
-        fontFamily: _fontFamily,
         fontSize: 32,
         fontWeight: FontWeight.w700,
         color: textColor,
       ),
       headlineMedium: TextStyle(
-        fontFamily: _fontFamily,
         fontSize: 28,
         fontWeight: FontWeight.w600,
         color: textColor,
       ),
       headlineSmall: TextStyle(
-        fontFamily: _fontFamily,
         fontSize: 24,
         fontWeight: FontWeight.w600,
         color: textColor,
       ),
       titleLarge: TextStyle(
-        fontFamily: _fontFamily,
         fontSize: 22,
         fontWeight: FontWeight.w600,
         color: textColor,
       ),
       titleMedium: TextStyle(
-        fontFamily: _fontFamily,
         fontSize: 16,
         fontWeight: FontWeight.w600,
         color: textColor,
         letterSpacing: 0.15,
       ),
       titleSmall: TextStyle(
-        fontFamily: _fontFamily,
         fontSize: 14,
         fontWeight: FontWeight.w600,
         color: textColor,
         letterSpacing: 0.1,
       ),
       bodyLarge: TextStyle(
-        fontFamily: _fontFamily,
         fontSize: 16,
         fontWeight: FontWeight.w400,
         color: textColor,
         letterSpacing: 0.5,
       ),
       bodyMedium: TextStyle(
-        fontFamily: _fontFamily,
         fontSize: 14,
         fontWeight: FontWeight.w400,
         color: textColor,
         letterSpacing: 0.25,
       ),
       bodySmall: TextStyle(
-        fontFamily: _fontFamily,
         fontSize: 12,
         fontWeight: FontWeight.w400,
         color: secondaryColor,
         letterSpacing: 0.4,
       ),
       labelLarge: TextStyle(
-        fontFamily: _fontFamily,
         fontSize: 14,
         fontWeight: FontWeight.w600,
         color: textColor,
         letterSpacing: 0.1,
       ),
       labelMedium: TextStyle(
-        fontFamily: _fontFamily,
         fontSize: 12,
         fontWeight: FontWeight.w500,
         color: textColor,
         letterSpacing: 0.5,
       ),
       labelSmall: TextStyle(
-        fontFamily: _fontFamily,
         fontSize: 11,
         fontWeight: FontWeight.w500,
         color: secondaryColor,
         letterSpacing: 0.5,
       ),
     );
+    return GoogleFonts.cairoTextTheme(baseTextTheme);
   }
 
   // ─── Dark Theme ───────────────────────────────────────────────────────────
