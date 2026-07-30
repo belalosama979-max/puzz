@@ -34,11 +34,6 @@ android {
             shrinkResources false
         }
     }
-
-    // Enable multidex for large apps
-    defaultConfig {
-        multiDexEnabled true
-    }
 }
 
 flutter {
@@ -46,6 +41,5 @@ flutter {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.ext.kotlin_version}"
     implementation 'androidx.multidex:multidex:2.0.1'
 }
