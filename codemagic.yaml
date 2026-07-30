@@ -3,13 +3,20 @@ workflows:
     name: BuzzMaster Android Build
     max_build_duration: 120
     environment:
-      flutter: stable
+      flutter: 3.24.0
     scripts:
       - name: Get Flutter packages
         script: |
-          flutter packages pub get
-      - name: Build APK with Flutter
+          flutter pub get
+      - name: Build release APK
         script: |
-          flutter build apk --release
+          flutter build apk --release --no-tree-shake-icons
     artifacts:
       - build/app/outputs/flutter-apk/app-release.apk
+    publishing:
+      email:
+        recipients:
+          - belalosama979-max@users.noreply.github.com
+        notify:
+          success: true
+          failure: true
