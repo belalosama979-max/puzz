@@ -3,7 +3,7 @@ workflows:
     name: BuzzMaster Android Build
     max_build_duration: 120
     environment:
-      flutter: 3.24.5
+      flutter: 3.44.8
       java: 17
     scripts:
       - name: Set up local.properties
