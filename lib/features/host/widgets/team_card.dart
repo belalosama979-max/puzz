@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 
 import '../../../core/constants/arabic_strings.dart';
 import '../../../core/theme/app_colors.dart';

@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:uuid/uuid.dart';
 
 import '../../../core/constants/app_constants.dart';
 import '../../../domain/models/room_model.dart';
@@ -58,7 +57,6 @@ class HostViewModel extends StateNotifier<HostState> {
   final BuzzEngine buzzEngine;
   final StorageRepository storage;
   final AudioService audio;
-  final _uuid = const Uuid();
 
   StreamSubscription? _serverSub;
 
@@ -122,6 +120,8 @@ class HostViewModel extends StateNotifier<HostState> {
           _refreshTeams();
           audio.playJoin();
         case HostServerEvent.batteryUpdate:
+          _refreshTeams();
+        case HostServerEvent.teamReady:
           _refreshTeams();
         case HostServerEvent.buzzReceived:
           // Handled by GameViewModel.
