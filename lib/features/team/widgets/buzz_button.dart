@@ -63,28 +63,22 @@ class _BuzzButtonState extends State<BuzzButton>
 
     Color buttonColor;
     String label;
-    List<Color> glowColors;
 
     if (isWinner) {
       buttonColor = AppColors.buzzWinner;
       label = ArabicStrings.youWon;
-      glowColors = [AppColors.buzzWinner, const Color(0xFFFFAA00)];
     } else if (isEnabled) {
       buttonColor = AppColors.buzzActive;
       label = ArabicStrings.pressTheBuzzer;
-      glowColors = [AppColors.buzzGlow, AppColors.buzzActive];
     } else if (isSent) {
       buttonColor = AppColors.warning;
       label = ArabicStrings.buzzSent;
-      glowColors = [AppColors.warning, AppColors.warning];
     } else if (isPaused) {
       buttonColor = AppColors.darkTextDisabled;
       label = ArabicStrings.competitionPaused;
-      glowColors = [AppColors.darkTextDisabled, AppColors.darkTextDisabled];
     } else {
       buttonColor = AppColors.buzzDisabled;
       label = ArabicStrings.buzzerLocked;
-      glowColors = [AppColors.darkTextDisabled, AppColors.darkSurfaceVariant];
     }
 
     return GestureDetector(
