@@ -7,7 +7,6 @@ import 'package:confetti/confetti.dart';
 import '../../../core/constants/arabic_strings.dart';
 import '../../../core/router/app_router.dart';
 import '../../../core/theme/app_colors.dart';
-import '../../../core/di/providers.dart';
 
 class TeamResultScreen extends ConsumerStatefulWidget {
   const TeamResultScreen({super.key});
@@ -33,7 +32,6 @@ class _TeamResultScreenState extends ConsumerState<TeamResultScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final teamState = ref.watch(teamViewModelProvider);
 
     return Scaffold(
       body: Stack(

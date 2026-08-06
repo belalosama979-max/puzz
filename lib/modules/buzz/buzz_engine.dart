@@ -37,7 +37,6 @@ class BuzzEngine {
   BuzzEngineState _state = BuzzEngineState.idle;
   String _currentRoundId = '';
   String? _winnerId;
-  DateTime? _roundOpenedAt;
 
   final List<BuzzEventModel> _roundEvents = [];
   final _winnerController =
@@ -60,7 +59,6 @@ class BuzzEngine {
   /// Open the buzzer for a new round.
   String openRound() {
     _currentRoundId = _uuid.v4();
-    _roundOpenedAt = DateTime.now();
     _winnerId = null;
     _roundEvents.clear();
     _state = BuzzEngineState.open;

@@ -1,9 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:uuid/uuid.dart';
 
-import '../../../core/constants/app_constants.dart';
 import '../../../domain/models/buzz_event_model.dart';
 import '../../../domain/models/packet_model.dart';
 import '../../../domain/models/room_model.dart';
@@ -84,7 +82,6 @@ class GameViewModel extends StateNotifier<GameState> {
   final AudioService audio;
   final StorageRepository storage;
 
-  final _uuid = const Uuid();
   StreamSubscription? _winnerSub;
   StreamSubscription? _serverSub;
 
@@ -158,7 +155,7 @@ class GameViewModel extends StateNotifier<GameState> {
     _serverSub = server.events.listen((update) {
       if (update.event == HostServerEvent.buzzReceived &&
           update.packet != null) {
-        final result = buzzEngine.processBuzz(update.packet!);
+        buzzEngine.processBuzz(update.packet!);
         // Winner handling done in buzz engine stream above.
       }
       _connectedTeams = server.connectedTeams;

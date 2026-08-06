@@ -8,7 +8,6 @@ import '../../../core/constants/arabic_strings.dart';
 import '../../../core/router/app_router.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/di/providers.dart';
-import '../../../modules/networking/discovery_service.dart';
 
 class TeamSetupScreen extends ConsumerStatefulWidget {
   const TeamSetupScreen({super.key});
@@ -269,7 +268,7 @@ class _TeamSetupScreenState extends ConsumerState<TeamSetupScreen> {
     if (!_formKey.currentState!.validate()) return;
     setState(() => _isConnecting = true);
 
-    final auth = ref.read(authViewModelProvider);
+    final authNotifier = ref.read(authViewModelProvider.notifier);
 
     // Try to discover the host.
     // In practice, discovery runs in the background and finds the host.
@@ -288,7 +287,7 @@ class _TeamSetupScreenState extends ConsumerState<TeamSetupScreen> {
     }
 
     final ok = await ref.read(teamViewModelProvider.notifier).joinRoom(
-          localId: auth.deviceId,
+          localId: authNotifier.deviceId,
           hostAddress: hostAddress,
           hostPort: AppConstants.hostPort,
           roomCode: _roomCode,
@@ -303,7 +302,7 @@ class _TeamSetupScreenState extends ConsumerState<TeamSetupScreen> {
     if (ok) {
       ref
           .read(buzzViewModelProvider.notifier)
-          .setLocalTeamId(auth.deviceId);
+          .setLocalTeamId(authNotifier.deviceId);
       context.go(AppRoutes.waiting);
     } else {
       ScaffoldMessenger.of(context).showSnackBar(

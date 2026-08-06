@@ -27,7 +27,7 @@ class VibrationService {
   Future<void> _vibrate(List<int> pattern) async {
     if (!vibrationEnabled) return;
     try {
-      final hasVibrator = await Vibration.hasVibrator() ?? false;
+      final hasVibrator = await Vibration.hasVibrator();
       if (!hasVibrator) return;
       await Vibration.vibrate(pattern: pattern);
     } catch (e) {

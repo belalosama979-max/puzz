@@ -9,7 +9,6 @@ import '../../../core/constants/arabic_strings.dart';
 import '../../../core/router/app_router.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/di/providers.dart';
-import '../../host/viewmodels/host_viewmodel.dart';
 
 class CreateRoomScreen extends ConsumerStatefulWidget {
   const CreateRoomScreen({super.key});
@@ -25,8 +24,9 @@ class _CreateRoomScreenState extends ConsumerState<CreateRoomScreen> {
   @override
   void initState() {
     super.initState();
-    final auth = ref.read(authViewModelProvider);
-    ref.read(hostViewModelProvider.notifier).setDeviceId(auth.deviceId);
+    ref.read(hostViewModelProvider.notifier).setDeviceId(
+      ref.read(authViewModelProvider.notifier).deviceId,
+    );
   }
 
   @override

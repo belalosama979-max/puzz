@@ -8,8 +8,6 @@ import '../../../core/constants/arabic_strings.dart';
 import '../../../core/router/app_router.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/di/providers.dart';
-import '../../statistics/viewmodels/statistics_viewmodel.dart';
-import '../../statistics/screens/statistics_screen.dart';
 
 class ResultsScreen extends ConsumerStatefulWidget {
   const ResultsScreen({super.key});

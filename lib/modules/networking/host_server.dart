@@ -24,7 +24,6 @@ class TeamConnection {
   final Socket socket;
   TeamModel team;
   final HeartbeatSession heartbeat;
-  int _seq = 0;
   final Set<int> _seenSequences = {};
   int _lastPingMs = 0;
 

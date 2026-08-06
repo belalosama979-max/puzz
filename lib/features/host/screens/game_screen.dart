@@ -10,9 +10,9 @@ import '../../../core/theme/app_colors.dart';
 import '../../../core/di/providers.dart';
 import '../../../domain/models/room_model.dart';
 import '../../../domain/models/team_model.dart';
+import '../viewmodels/game_viewmodel.dart';
 import '../widgets/round_controls.dart';
 import '../widgets/winner_banner.dart';
-import '../widgets/team_card.dart';
 import '../widgets/network_status_bar.dart';
 
 class GameScreen extends ConsumerStatefulWidget {

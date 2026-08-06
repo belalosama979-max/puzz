@@ -5,7 +5,6 @@ import 'package:flutter_animate/flutter_animate.dart';
 import '../../../core/constants/arabic_strings.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/di/providers.dart';
-import '../../statistics/viewmodels/statistics_viewmodel.dart';
 import '../../../domain/models/statistics_model.dart';
 import '../../../domain/models/round_model.dart';
 

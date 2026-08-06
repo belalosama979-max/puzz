@@ -8,6 +8,7 @@ import '../../../core/router/app_router.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/di/providers.dart';
 import '../../../domain/models/team_model.dart';
+import '../viewmodels/buzz_viewmodel.dart';
 
 class WaitingScreen extends ConsumerWidget {
   const WaitingScreen({super.key});
@@ -15,7 +16,6 @@ class WaitingScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final teamState = ref.watch(teamViewModelProvider);
-    final buzzState = ref.watch(buzzViewModelProvider);
 
     // Navigate to buzz screen when round opens.
     ref.listen(buzzViewModelProvider, (prev, next) {

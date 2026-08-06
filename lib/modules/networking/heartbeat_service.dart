@@ -1,12 +1,9 @@
 import 'dart:async';
-import 'dart:io';
-import 'dart:typed_data';
 
 import 'package:logger/logger.dart';
 
 import '../../core/constants/app_constants.dart';
 import '../../domain/models/packet_model.dart';
-import 'packet_codec.dart';
 
 final _log = Logger(printer: PrettyPrinter(methodCount: 0));
 
@@ -36,7 +33,6 @@ class HeartbeatSession {
   Timer? _heartbeatTimer;
   Timer? _timeoutTimer;
   int _seq = 0;
-  DateTime _lastReceived = DateTime.now();
 
   /// Start sending heartbeats.
   void start() {
@@ -49,7 +45,6 @@ class HeartbeatSession {
 
   /// Call this whenever any packet is received from the remote peer.
   void onPacketReceived() {
-    _lastReceived = DateTime.now();
     _resetTimeout();
   }
 

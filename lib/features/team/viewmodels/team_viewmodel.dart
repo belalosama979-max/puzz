@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../domain/models/team_model.dart';
-import '../../../domain/models/room_model.dart';
 import '../../../modules/networking/team_client.dart';
 import '../../../modules/storage/storage_repository.dart';
 

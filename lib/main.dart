@@ -6,7 +6,6 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'core/di/providers.dart';
 import 'core/router/app_router.dart';
 import 'core/theme/app_theme.dart';
-import 'features/settings/viewmodels/settings_viewmodel.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
