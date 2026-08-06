@@ -1,5 +1,4 @@
 import 'buzz_event_model.dart';
-import 'team_model.dart';
 
 /// Result of a single round.
 class RoundModel {
