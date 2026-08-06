@@ -137,7 +137,7 @@ class _RoleCardState extends State<_RoleCard>
             borderRadius: BorderRadius.circular(24),
             boxShadow: [
               BoxShadow(
-                color: widget.gradient.colors.first.withOpacity(0.35),
+                color: widget.gradient.colors.first.withValues(alpha: 0.35),
                 blurRadius: 24,
                 offset: const Offset(0, 8),
               ),
@@ -164,7 +164,7 @@ class _RoleCardState extends State<_RoleCard>
                     Text(
                       widget.description,
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                            color: Colors.white.withOpacity(0.85),
+                            color: Colors.white.withValues(alpha: 0.85),
                           ),
                       textAlign: TextAlign.right,
                     ),
@@ -176,7 +176,7 @@ class _RoleCardState extends State<_RoleCard>
                 width: 72,
                 height: 72,
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.2),
+                  color: Colors.white.withValues(alpha: 0.2),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Icon(widget.icon, size: 40, color: Colors.white),

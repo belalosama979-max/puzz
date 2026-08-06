@@ -113,7 +113,7 @@ class _BuzzButtonState extends State<BuzzButton>
                     shape: BoxShape.circle,
                     boxShadow: [
                       BoxShadow(
-                        color: buttonColor.withOpacity(0.25),
+                        color: buttonColor.withValues(alpha: 0.25),
                         blurRadius: 50,
                         spreadRadius: 20,
                       ),
@@ -141,21 +141,21 @@ class _BuzzButtonState extends State<BuzzButton>
                           ]
                         : [
                             buttonColor,
-                            buttonColor.withOpacity(0.75),
+                            buttonColor.withValues(alpha: 0.75),
                           ],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: buttonColor.withOpacity(isEnabled || isWinner ? 0.5 : 0.2),
+                      color: buttonColor.withValues(alpha: isEnabled || isWinner ? 0.5 : 0.2),
                       blurRadius: 30,
                       offset: const Offset(0, 10),
                     ),
                   ],
                   border: Border.all(
                     color: isEnabled || isWinner
-                        ? buttonColor.withOpacity(0.6)
+                        ? buttonColor.withValues(alpha: 0.6)
                         : AppColors.darkDivider,
                     width: 3,
                   ),

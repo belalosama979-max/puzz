@@ -88,7 +88,7 @@ class WaitingScreen extends ConsumerWidget {
                         color: (isConnected
                                 ? AppColors.success
                                 : AppColors.warning)
-                            .withOpacity(0.15),
+                            .withValues(alpha: 0.15),
                         shape: BoxShape.circle,
                         border: Border.all(
                           color: isConnected
@@ -137,7 +137,7 @@ class WaitingScreen extends ConsumerWidget {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 20, vertical: 10),
                       decoration: BoxDecoration(
-                        color: Color(teamState.teamColor).withOpacity(0.2),
+                        color: Color(teamState.teamColor).withValues(alpha: 0.2),
                         borderRadius: BorderRadius.circular(30),
                         border: Border.all(
                           color: Color(teamState.teamColor),

@@ -26,7 +26,7 @@ class TeamCard extends StatelessWidget {
         color: AppColors.darkCard,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
-          color: teamColor.withOpacity(0.3),
+          color: teamColor.withValues(alpha: 0.3),
           width: 1,
         ),
       ),
@@ -116,7 +116,7 @@ class TeamCard extends StatelessWidget {
               shape: BoxShape.circle,
               boxShadow: [
                 BoxShadow(
-                  color: teamColor.withOpacity(0.4),
+                  color: teamColor.withValues(alpha: 0.4),
                   blurRadius: 8,
                   spreadRadius: 1,
                 ),

@@ -37,7 +37,7 @@ class WinnerAnimationWidget extends StatelessWidget {
             height: 100,
             decoration: BoxDecoration(
               color: isWinner
-                  ? AppColors.buzzWinner.withOpacity(0.15)
+                  ? AppColors.buzzWinner.withValues(alpha: 0.15)
                   : AppColors.darkSurfaceVariant,
               shape: BoxShape.circle,
               border: Border.all(
@@ -47,7 +47,7 @@ class WinnerAnimationWidget extends StatelessWidget {
               boxShadow: isWinner
                   ? [
                       BoxShadow(
-                        color: AppColors.buzzWinner.withOpacity(0.35),
+                        color: AppColors.buzzWinner.withValues(alpha: 0.35),
                         blurRadius: 30,
                         spreadRadius: 5,
                       ),
@@ -110,9 +110,9 @@ class WinnerAnimationWidget extends StatelessWidget {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
               decoration: BoxDecoration(
-                color: AppColors.buzzWinner.withOpacity(0.1),
+                color: AppColors.buzzWinner.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(30),
-                border: Border.all(color: AppColors.buzzWinner.withOpacity(0.3)),
+                border: Border.all(color: AppColors.buzzWinner.withValues(alpha: 0.3)),
               ),
               child: Text(
                 '${ArabicStrings.reactionTime}: ${reactionMs}ms',
@@ -132,8 +132,8 @@ class WinnerAnimationWidget extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
               decoration: BoxDecoration(
                 color: answerAccepted!
-                    ? AppColors.success.withOpacity(0.12)
-                    : AppColors.error.withOpacity(0.12),
+                    ? AppColors.success.withValues(alpha: 0.12)
+                    : AppColors.error.withValues(alpha: 0.12),
                 borderRadius: BorderRadius.circular(30),
                 border: Border.all(
                   color: answerAccepted! ? AppColors.success : AppColors.error,

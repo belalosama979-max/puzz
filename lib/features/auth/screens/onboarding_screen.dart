@@ -184,7 +184,7 @@ class _OnboardingPageWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(40),
               boxShadow: [
                 BoxShadow(
-                  color: page.gradient.first.withOpacity(0.4),
+                  color: page.gradient.first.withValues(alpha: 0.4),
                   blurRadius: 40,
                   spreadRadius: 8,
                 ),

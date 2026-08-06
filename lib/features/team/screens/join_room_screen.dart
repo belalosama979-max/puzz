@@ -82,7 +82,7 @@ class _JoinRoomScreenState extends ConsumerState<JoinRoomScreen> {
                   borderRadius: BorderRadius.circular(28),
                   boxShadow: [
                     BoxShadow(
-                      color: const Color(0xFFFF3D3D).withOpacity(0.4),
+                      color: const Color(0xFFFF3D3D).withValues(alpha: 0.4),
                       blurRadius: 24,
                       spreadRadius: 4,
                     ),

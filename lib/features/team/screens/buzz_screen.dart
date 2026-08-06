@@ -71,7 +71,7 @@ class _BuzzScreenState extends ConsumerState<BuzzScreen> {
               gradient: LinearGradient(
                 colors: [
                   AppColors.darkBackground,
-                  Color(teamState.teamColor).withOpacity(0.08),
+                  Color(teamState.teamColor).withValues(alpha: 0.08),
                 ],
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,

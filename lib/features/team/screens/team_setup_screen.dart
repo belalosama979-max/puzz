@@ -173,7 +173,7 @@ class _TeamSetupScreenState extends ConsumerState<TeamSetupScreen> {
                               boxShadow: isSelected
                                   ? [
                                       BoxShadow(
-                                        color: color.withOpacity(0.5),
+                                        color: color.withValues(alpha: 0.5),
                                         blurRadius: 12,
                                         spreadRadius: 2,
                                       ),

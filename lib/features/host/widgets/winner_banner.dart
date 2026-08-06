@@ -30,7 +30,7 @@ class WinnerBanner extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
-            color: AppColors.buzzWinner.withOpacity(0.4),
+            color: AppColors.buzzWinner.withValues(alpha: 0.4),
             blurRadius: 20,
             spreadRadius: 4,
           ),
@@ -95,7 +95,7 @@ class WinnerBanner extends StatelessWidget {
             width: 52,
             height: 52,
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.2),
+              color: Colors.white.withValues(alpha: 0.2),
               shape: BoxShape.circle,
             ),
             child: const Icon(

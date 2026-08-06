@@ -268,9 +268,9 @@ class _RoundStatusChip extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.15),
+        color: color.withValues(alpha: 0.15),
         borderRadius: BorderRadius.circular(30),
-        border: Border.all(color: color.withOpacity(0.4)),
+        border: Border.all(color: color.withValues(alpha: 0.4)),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
@@ -329,19 +329,19 @@ class _TeamGridCard extends StatelessWidget {
       duration: const Duration(milliseconds: 300),
       decoration: BoxDecoration(
         color: isWinner
-            ? AppColors.buzzWinner.withOpacity(0.15)
+            ? AppColors.buzzWinner.withValues(alpha: 0.15)
             : AppColors.darkCard,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
           color: isWinner
               ? AppColors.buzzWinner
-              : Color(team.color).withOpacity(0.3),
+              : Color(team.color).withValues(alpha: 0.3),
           width: isWinner ? 2 : 1,
         ),
         boxShadow: isWinner
             ? [
                 BoxShadow(
-                  color: AppColors.buzzWinner.withOpacity(0.3),
+                  color: AppColors.buzzWinner.withValues(alpha: 0.3),
                   blurRadius: 16,
                   spreadRadius: 2,
                 ),
